@@ -1,0 +1,178 @@
+% Curriculum Vitae -- Kelvin Ka-Ho Lam
+% Compile with:  pdflatex CV.tex   (run twice is not needed; no references)
+% Keep in sync with the website (kelvin33550336.github.io).
+
+\documentclass[11pt]{article}
+
+\usepackage[hmargin=0.75in, vmargin=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{XCharter}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=NavyBlue, linkcolor=NavyBlue}
+
+\setlength{\parindent}{0pt}
+\pagestyle{plain}
+
+% Section headings: small caps with a rule underneath
+\titleformat{\section}{\large\scshape}{}{0pt}{}[\vspace{-6pt}\rule{\linewidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=1.5em}
+
+% \entry{Left bold}{Right date}  -- one line with a right-aligned date
+\newcommand{\entry}[2]{\textbf{#1} \hfill #2 \\}
+
+% Publication: {title}{authors}{venue and links}
+\newcommand{\pub}[3]{\item ``#1,''\\ #2\\ #3}
+\newcommand{\me}{\textbf{Kelvin Ka-Ho Lam}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:#1}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:#1}}
+
+\begin{document}
+
+%===========================
+% HEADER
+%===========================
+{\LARGE \textbf{Kelvin Ka-Ho Lam}}\par
+\vspace{4pt}
+PhD Student in Physics\par
+Department of Physics, University of Illinois Urbana-Champaign\par
+\vspace{4pt}
+Email: \href{mailto:khlam4@illinois.edu}{khlam4@illinois.edu}
+\quad$\cdot$\quad Website: \href{https://kelvin33550336.github.io}{kelvin33550336.github.io}\par
+ORCID: \href{https://orcid.org/0009-0008-0185-2543}{0009-0008-0185-2543}\par
+
+%===========================
+\section*{Research Interests}
+%===========================
+General relativity, modified gravity, black holes, black hole perturbation theory, effective field theory, numerical and spectral methods.
+
+%===========================
+\section*{Education}
+%===========================
+\entry{University of Illinois Urbana-Champaign}{2024 -- Present}
+PhD in Physics; GPA: 4.0/4.0\\
+Advisor: Prof.\ Nicolás Yunes
+
+\vspace{6pt}
+\entry{University of California, Berkeley}{Jan 2023 -- Aug 2023}
+University of California Education Abroad Program; GPA: 4.0/4.0\\
+N3AS Undergraduate Researcher
+
+\vspace{6pt}
+\entry{The Chinese University of Hong Kong}{2020 -- 2024}
+Bachelor of Science in Physics; Major GPA: 3.93/4.00\\
+Enrichment Stream in Theoretical Physics; Astrophysics and Particle Physics Stream\\
+Advisor: Dr.\ Lap-Ming Lin
+
+%===========================
+\section*{Teaching Experience}
+%===========================
+\entry{University of Illinois Urbana-Champaign}{2024 -- Present}
+Teaching Assistant
+\begin{itemize}
+  \item Quantum Physics I (PHYS 486) \hfill Fall 2026
+  \item Thermal \& Statistical Physics (PHYS 427) \hfill Spring 2026
+  \item Electromagnetic Fields II (PHYS 436) \hfill Spring 2025
+  \item Classical Mechanics I (PHYS 325) \hfill Fall 2024
+\end{itemize}
+
+%===========================
+\section*{Publications}
+%===========================
+{\raggedright
+% Numbered in descending order (newest = highest). Update \npubs when adding a paper.
+\newcommand{\npubs}{9}
+\makeatletter
+\newcommand{\revnum}[1]{\expandafter\@revnum\csname c@#1\endcsname}
+\newcommand{\@revnum}[1]{\number\numexpr\npubs+1-#1\relax}
+\makeatother
+\AddEnumerateCounter{\revnum}{\@revnum}{9}
+\begin{enumerate}[leftmargin=*, itemsep=2pt, label={[\revnum*]}]
+
+\pub{Living on the Edge of Effective Field Theory: Near-Extremal Black Holes in Quadratic Gravity}
+    {\me, Gary T. Horowitz, Nicolás Yunes}
+    {Preprint (2026), \arxiv{2608.05268}}
+
+\pub{Measuring a Black Hole's Area Immediately after Merger: A Direct-Wave Test of Hawking's Area Law}
+    {Adrian Ka-Wai Chung, \me, Anna Liu, Nicolás Yunes}
+    {Preprint (2026), \arxiv{2606.06592}}
+
+\pub{Quadratic gravity corrections to scalar quasinormal modes of rapidly rotating black holes}
+    {Stef J.\,B. Husken, Tom van der Steen, Simon Maenaut, \me, Maxim D. Jockwer, Adrian Ka-Wai Chung, Thomas Hertog, Tjonnie G.\,F. Li, Nicolás Yunes}
+    {\textit{Physical Review D} \textbf{114}, 064072 (2026), \doi{10.1103/jrnh-wsxw}, \arxiv{2604.02214}}
+
+\pub{Spinning Black Holes in Modified Gravity via Spectral Methods}
+    {\me, Adrian Ka-Wai Chung, Nicolás Yunes}
+    {\textit{Physical Review Letters} \textbf{136}, 021401 (2026), \doi{10.1103/6z43-xdv7}, \arxiv{2509.07061}}
+
+\pub{Analytic and accurate approximate metrics for black holes with arbitrary rotation in beyond-Einstein gravity using spectral methods}
+    {\me, Adrian Ka-Wai Chung, Nicolás Yunes}
+    {\textit{Physical Review D} \textbf{113}, 024030 (2026), \doi{10.1103/txxb-z8bx}, \arxiv{2510.05208}}
+
+\pub{Quasinormal mode frequencies and gravitational perturbations of spinning black holes in modified gravity through METRICS: The dynamical Chern--Simons gravity case}
+    {Adrian Ka-Wai Chung, \me, Nicolás Yunes}
+    {\textit{Physical Review D} \textbf{111}, 124052 (2025), \doi{10.1103/g83n-rrlj}, \arxiv{2503.11759}}
+
+\pub{I-Love-Q relations of fermion-boson stars}
+    {\me, Lap-Ming Lin}
+    {\textit{Physical Review D} \textbf{111}, 104071 (2025), \doi{10.1103/PhysRevD.111.104071}, \arxiv{2505.04605}}
+
+\pub{Recalibrating a gravitational wave phenomenological waveform model}
+    {\me, Kaze W.\,K. Wong, Thomas D.\,P. Edwards}
+    {\textit{Physical Review D} \textbf{109}, 124009 (2024), \doi{10.1103/PhysRevD.109.124009}, \arxiv{2306.17245}}
+
+\pub{Differentiable and hardware-accelerated waveforms for gravitational wave data analysis}
+    {Thomas D.\,P. Edwards, Kaze W.\,K. Wong, \me, Adam Coogan, Daniel Foreman-Mackey, Maximiliano Isi, Aaron Zimmerman}
+    {\textit{Physical Review D} \textbf{110}, 064028 (2024), \doi{10.1103/PhysRevD.110.064028}, \arxiv{2302.05329}}
+
+\end{enumerate}
+\par}
+
+%===========================
+\section*{Presentations}
+%===========================
+\begin{itemize}
+  \item ``Living on the Edge of Effective Field Theory: Near-Extremal Black Holes in Quadratic Gravity,''\\
+        Midwest Relativity Meeting, Oakland University, MI \hfill 2026
+  \item ``Constructing rotating black hole spacetime in beyond-Einstein gravity via spectral methods,''\\
+        APS Global Summit, Denver, CO \hfill 2026
+  \item Physics Student Conference, CUHK \hfill 2022
+  \item Poster presentation, CUHK \hfill 2021
+\end{itemize}
+
+%===========================
+\section*{Conferences Attended}
+%===========================
+\begin{itemize}
+  \item Midwest Relativity Meeting, Oakland University, MI \hfill 2026
+  \item APS Global Summit, Denver, CO \hfill 2026
+  \item Simons December Meeting, Chicago, IL \hfill 2025
+  \item Physics Student Conference, CUHK, Hong Kong \hfill 2022
+\end{itemize}
+
+%===========================
+\section*{Honors and Awards}
+%===========================
+\begin{itemize}
+  \item DGRAV Travel Award \hfill 2026
+  \item S.\,L. Pao Education Foundation Scholarship \hfill 2024
+  \item Charles Kao Exchange Scholarship \hfill 2023
+  \item Kunkle and Pommerenke Scholarship \hfill 2022, 2023
+  \item Yasumoto Exchange Scholarship \hfill 2022, 2023
+  \item University Exchange Scholarship \hfill 2022, 2023
+  \item Reaching Out Award \hfill 2023
+  \item Dean's List, CUHK \hfill 2020 -- 2022
+  \item C.\,N. Yang Scholarship \hfill 2020 -- 2022
+\end{itemize}
+
+%===========================
+\section*{Skills}
+%===========================
+\textbf{Languages:} Cantonese, English, Mandarin \quad$\cdot$\quad \textbf{Programming:} Python, \LaTeX, Mathematica, C, Julia
+
+\end{document}
