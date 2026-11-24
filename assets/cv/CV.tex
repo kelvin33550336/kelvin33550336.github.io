@@ -27,7 +27,8 @@
 \newcommand{\entry}[2]{\textbf{#1} \hfill #2 \\}
 
 % Publication: {title}{authors}{venue and links}
-\newcommand{\pub}[3]{\item ``#1,''\\ #2\\ #3}
+% (\\* and \interlinepenalty below keep an entry from splitting across pages)
+\newcommand{\pub}[3]{\item #1\\* #2\\* #3}
 \newcommand{\me}{\textbf{Kelvin Ka-Ho Lam}}
 \newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:#1}}
 \newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:#1}}
@@ -64,6 +65,11 @@ University of California Education Abroad Program; GPA: 4.0/4.0\\
 N3AS Undergraduate Researcher
 
 \vspace{6pt}
+\entry{Center for Computational Astrophysics, Flatiron Institute}{May 2022 -- Aug 2022}
+Undergraduate Researcher\\
+Mentor: Dr.\ Kaze W.\,K. Wong
+
+\vspace{6pt}
 \entry{The Chinese University of Hong Kong}{2020 -- 2024}
 Bachelor of Science in Physics; Major GPA: 3.93/4.00\\
 Enrichment Stream in Theoretical Physics; Astrophysics and Particle Physics Stream\\
@@ -84,19 +90,27 @@ Teaching Assistant
 %===========================
 \section*{Publications}
 %===========================
-{\raggedright
+{\raggedright\interlinepenalty=10000
 % Numbered in descending order (newest = highest). Update \npubs when adding a paper.
-\newcommand{\npubs}{9}
+\newcommand{\npubs}{11}
 \makeatletter
 \newcommand{\revnum}[1]{\expandafter\@revnum\csname c@#1\endcsname}
 \newcommand{\@revnum}[1]{\number\numexpr\npubs+1-#1\relax}
 \makeatother
 \AddEnumerateCounter{\revnum}{\@revnum}{9}
-\begin{enumerate}[leftmargin=*, itemsep=2pt, label={[\revnum*]}]
+\begin{enumerate}[leftmargin=2.4em, itemsep=2pt, label={[\revnum*]}]
+
+\pub{Einstein Reconstruction Scheme: Metric Reconstruction by Direct Inversion of the Einstein Operator}
+    {\me, Dongjun Li, Nicolás Yunes}
+    {Preprint (2026), \arxiv{2611.15853}}
+
+\pub{Modeling extreme mass-ratio inspirals in astrophysical and dark-matter environments}
+    {Dongjun Li, Hao-Jui Kuan, Colin Weller, Chaoyi Yang, \me, Patrick Bourg, Adrian Ka-Wai Chung, Yanbei Chen, Nicolás Yunes, Huan Yang}
+    {Preprint (2026), \arxiv{2610.22480}}
 
 \pub{Living on the Edge of Effective Field Theory: Near-Extremal Black Holes in Quadratic Gravity}
     {\me, Gary T. Horowitz, Nicolás Yunes}
-    {Preprint (2026), \arxiv{2608.05268}}
+    {\textit{Physical Review D} \textbf{114}, 104044 (2026), \doi{10.1103/ddyq-94zb}, \arxiv{2608.05268}}
 
 \pub{Measuring a Black Hole's Area Immediately after Merger: A Direct-Wave Test of Hawking's Area Law}
     {Adrian Ka-Wai Chung, \me, Anna Liu, Nicolás Yunes}
@@ -137,9 +151,9 @@ Teaching Assistant
 \section*{Presentations}
 %===========================
 \begin{itemize}
-  \item ``Living on the Edge of Effective Field Theory: Near-Extremal Black Holes in Quadratic Gravity,''\\
+  \item Living on the Edge of Effective Field Theory: Near-Extremal Black Holes in Quadratic Gravity\\
         Midwest Relativity Meeting, Oakland University, MI \hfill 2026
-  \item ``Constructing rotating black hole spacetime in beyond-Einstein gravity via spectral methods,''\\
+  \item Constructing rotating black hole spacetime in beyond-Einstein gravity via spectral methods\\
         APS Global Summit, Denver, CO \hfill 2026
   \item Physics Student Conference, CUHK \hfill 2022
   \item Poster presentation, CUHK \hfill 2021
